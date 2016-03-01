@@ -19,8 +19,9 @@ module.exports = function (grunt) {
 
         babel: {
             options: {
-                loose: ['es6.modules'],
-                modules: "common" // output a CommonJS module
+                "presets": [
+                     'es2015-loose'
+                ]
             },
             dist: {
                 files: {

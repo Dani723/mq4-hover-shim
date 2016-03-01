@@ -6,19 +6,7 @@
 * @module mq4HoverShim
 * @requires jquery
 */
-let $ = (function () {
-    try {
-        import * as jQuery from 'jquery';
-        return jQuery;
-    }
-    catch (importErr) {
-        const globaljQuery = window.$ || window.jQuery || window.Zepto;
-        if (!globaljQuery) {
-            throw new Error('mq4HoverShim needs jQuery (or similar)');
-        }
-        return globaljQuery;
-    }
-})();
+import * as $ from 'jquery';
 
 /** @type {boolean|undefined} */
 let canTrulyHover = undefined;
