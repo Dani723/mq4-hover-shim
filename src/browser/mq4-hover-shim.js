@@ -6,7 +6,13 @@
 * @module mq4HoverShim
 * @requires jquery
 */
-import $ from 'jquery';
+import jQuery from 'jquery';
+
+let $ = jQuery || window.$ || window.jQuery || window.Zepto;
+
+if (!$) {
+    throw new Error('mq4HoverShim needs jQuery (or similar)');
+}
 
 /** @type {boolean|undefined} */
 let canTrulyHover = undefined;
