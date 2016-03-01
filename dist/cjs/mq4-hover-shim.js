@@ -5,9 +5,9 @@ exports.supportsTrueHover = supportsTrueHover;
 
 var _jquery = require('jquery');
 
-var $ = _interopRequireWildcard(_jquery);
+var _jquery2 = _interopRequireDefault(_jquery);
 
-function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 /** @type {boolean|undefined} */
 var canTrulyHover = undefined;
@@ -25,7 +25,7 @@ var canTrulyHover = undefined;
 * @requires jquery
 */
 function triggerEvent() {
-    $(document).trigger($.Event('mq4hsChange', { bubbles: false, trueHover: canTrulyHover }));
+    (0, _jquery2.default)(document).trigger(_jquery2.default.Event('mq4hsChange', { bubbles: false, trueHover: canTrulyHover }));
 }
 
 // IIFE so we can use `return`s to avoid deeply-nested if-s

@@ -6,7 +6,7 @@
 * @module mq4HoverShim
 * @requires jquery
 */
-import * as $ from 'jquery';
+import $ from 'jquery';
 
 /** @type {boolean|undefined} */
 let canTrulyHover = undefined;
